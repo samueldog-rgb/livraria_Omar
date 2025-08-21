@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework.generics import ListCreateAPIView
-from .models import Autor
-from .serializers import AutorSerializer
+from .models import Autor, Editora, Livros
+from .serializers import AutorSerializer, EditoraSerializer, LivrosSerializer
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
@@ -23,4 +23,13 @@ def listar_autores(request):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         else:
             return Response(serializer.data, status=status.HTTP_400_BAD_REQUEST)
-            
+
+class EditorasView(ListCreateAPIView):
+    queryset = Editora.objects.all()
+    serializer_class = EditoraSerializer
+
+class LivrosView(ListCreateAPIView):
+    queryset = Livros.objects.all()
+    serializer_class = LivrosSerializer
+
+
