@@ -20,6 +20,6 @@ class LivrosSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Livros
-        fields = ['id', 'titulo' , 'substituto', 'editora', 'autor', 'isbn', 
+        fields =  ['id', 'titulo' , 'substituto', 'editora', 'autor', 'isbn', 'descricao',
                    'ano_publicacao', 'paginas','preco','estoque','desconto',
                      'disponivel', 'dimensoes',  'peso', 'editora', 'editora_id']

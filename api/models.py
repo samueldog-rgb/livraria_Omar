@@ -7,6 +7,9 @@ class Autor(models.Model):
     nacio = models.CharField(max_length=50, null=True, blank=True)
     bio = models.TextField()
 
+    def __str__(self):
+        return f'{self.autor} {self.s_nome}'
+
 class Editora(models.Model):
     editora = models.CharField(max_length=100)
     cnpj = models.CharField(max_length=18, unique=True, null=True, blank=True)
