@@ -22,13 +22,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'api',
     'rest_framework',
-     'rest_framework_simplejwt',
+    'rest_framework_simplejwt',
     
 ]
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    'rest_framework_simplejwt.authentication.JWTAuthentication',
     )
 }
 SIMPLE_JWT = {
